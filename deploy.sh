@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+
 docker build -t lucasfds/multi-client:latest -t lucasfds/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t lucasfds/multi-worker:latest -t lucasfds/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker build -t lucasfds/multi-server:latest -t lucasfds/multi-server:$SHA -f ./server/Dockerfile ./server
