@@ -23,7 +23,7 @@ before_install:
   - docker build -t lucasfds/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run lucasfds/react-test npm tests -- --coverage
+  - docker run lucasfds/react-test npm test -- --coverage
 
 
 deploy:
